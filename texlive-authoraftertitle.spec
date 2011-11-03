@@ -1,3 +1,9 @@
+# revision 17063
+# category Package
+# catalog-ctan /macros/latex/contrib/authoraftertitle
+# catalog-date 2010-02-23 16:03:07 +0100
+# catalog-license other-free
+# catalog-version 0.9
 Name:		texlive-authoraftertitle
 Version:	0.9
 Release:	1
@@ -39,6 +45,7 @@ package available to the user (as \MyAuthor, etc) after the
 %{_texmfdistdir}/tex/latex/authoraftertitle/authoraftertitle.sty
 %doc %{_texmfdistdir}/doc/latex/authoraftertitle/authoraftertitle.pdf
 %doc %{_texmfdistdir}/doc/latex/authoraftertitle/authoraftertitle.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -49,3 +56,5 @@ package available to the user (as \MyAuthor, etc) after the
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
