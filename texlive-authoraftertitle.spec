@@ -1,24 +1,22 @@
-# revision 17063
+# revision 24863
 # category Package
 # catalog-ctan /macros/latex/contrib/authoraftertitle
-# catalog-date 2010-02-23 16:03:07 +0100
-# catalog-license other-free
+# catalog-date 2011-12-17 14:41:04 +0100
+# catalog-license pd
 # catalog-version 0.9
 Name:		texlive-authoraftertitle
 Version:	0.9
-Release:	1
+Release:	2
 Summary:	Make author, etc., available after \maketitle
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/authoraftertitle
-License:	OTHER-FREE
+License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/authoraftertitle.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/authoraftertitle.doc.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 This jiffy package makes the author, title and date of the
@@ -26,19 +24,19 @@ package available to the user (as \MyAuthor, etc) after the
 \maketitle command has been executed.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
