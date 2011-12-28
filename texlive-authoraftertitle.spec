@@ -23,16 +23,8 @@ This jiffy package makes the author, title and date of the
 package available to the user (as \MyAuthor, etc) after the
 \maketitle command has been executed.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -44,7 +36,6 @@ package available to the user (as \MyAuthor, etc) after the
 %{_texmfdistdir}/tex/latex/authoraftertitle/authoraftertitle.sty
 %doc %{_texmfdistdir}/doc/latex/authoraftertitle/authoraftertitle.pdf
 %doc %{_texmfdistdir}/doc/latex/authoraftertitle/authoraftertitle.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -55,5 +46,3 @@ package available to the user (as \MyAuthor, etc) after the
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
