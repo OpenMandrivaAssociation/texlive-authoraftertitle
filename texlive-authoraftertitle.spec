@@ -46,3 +46,22 @@ package available to the user (as \MyAuthor, etc) after the
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.9-3
++ Revision: 749436
+- Rebuild to reduce used resources
+
+* Mon Dec 26 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.9-2
++ Revision: 745157
+- texlive-authoraftertitle
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.9-1
++ Revision: 717870
+- texlive-authoraftertitle
+- texlive-authoraftertitle
+- texlive-authoraftertitle
+- texlive-authoraftertitle
+- texlive-authoraftertitle
+
