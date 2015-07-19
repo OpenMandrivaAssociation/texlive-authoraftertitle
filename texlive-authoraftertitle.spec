@@ -6,7 +6,7 @@
 # catalog-version 0.9
 Name:		texlive-authoraftertitle
 Version:	0.9
-Release:	10
+Release:	11
 Summary:	Make author, etc., available after \maketitle
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/authoraftertitle
