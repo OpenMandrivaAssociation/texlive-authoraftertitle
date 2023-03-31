@@ -1,6 +1,6 @@
 Name:		texlive-authoraftertitle
 Version:	55889
-Release:	1
+Release:	2
 Summary:	Make author, etc., available after \maketitle
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/authoraftertitle
