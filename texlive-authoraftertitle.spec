@@ -3,7 +3,7 @@ Version:	55889
 Release:	2
 Summary:	Make author, etc., available after \maketitle
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/authoraftertitle
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/authoraftertitle
 License:	PD
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/authoraftertitle.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/authoraftertitle.doc.r%{version}.tar.xz
